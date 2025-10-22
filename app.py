@@ -55,11 +55,11 @@ def ensure_pinecone_index(api_key: str, index_name: str, cloud: str, region: str
     return pc
 
 @st.cache_resource(show_spinner=True)
-def get_vectorstore(index_name: str, namespace: str, embeddings, api_key: str):
+def get_vectorstore(index_name: str, namespace: str, _embeddings, api_key: str):
     return PineconeVectorStore(
         index_name=index_name,
         namespace=namespace,
-        embedding=embeddings,
+        embedding=_embeddings,
         pinecone_api_key=api_key
     )
 
