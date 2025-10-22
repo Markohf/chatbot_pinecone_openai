@@ -54,16 +54,14 @@ def ensure_pinecone_index(api_key: str, index_name: str, cloud: str, region: str
         )
     return pc
 
-@st.cache_resource(show_spinner=True)
-def get_vectorstore(index_name: str, namespace: str, _embeddings, api_key: str):
+def get_vectorstore(index_name: str, namespace: str, embeddings, api_key: str):
     return PineconeVectorStore(
         index_name=index_name,
         namespace=namespace,
-        embedding=_embeddings,
+        embedding=embeddings,
         pinecone_api_key=api_key
     )
 
-@st.cache_resource(show_spinner=True)
 def get_llm(openai_api_key: str, temperature: float = 0.0):
     os.environ["OPENAI_API_KEY"] = openai_api_key
     return ChatOpenAI(model="gpt-4o-mini", temperature=temperature)
