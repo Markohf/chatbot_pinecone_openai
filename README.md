@@ -1,4 +1,3 @@
-"""
 # 💬 Chatbot de Conocimiento con RAG + Pinecone + OpenAI
 
 Este proyecto implementa un **chatbot de recuperación aumentada (RAG)** que permite hacer preguntas sobre documentos internos cargados localmente.  
@@ -27,7 +26,7 @@ El flujo completo del proyecto se divide en dos partes:
 
 ## 📂 Estructura del proyecto
 ```
-despliegue_exam/
+root/
 │
 ├── .streamlit/
 │ └── secrets.toml # Variables de entorno y claves de API
