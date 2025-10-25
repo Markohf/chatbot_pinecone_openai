@@ -208,5 +208,5 @@ __marimo__/
 
 # Other
 .streamlit/
-notebooks/*
 !notebooks/.gitkeep
+notebooks/*
