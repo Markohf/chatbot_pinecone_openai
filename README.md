@@ -56,16 +56,16 @@ root/
 
 Desde la raíz del proyecto:
 
-#### En Windows (PowerShell):
+#### En Windows (Git Bash):
 ```
-python -m venv venv
-venv\Scripts\Activate.ps1
+python -m venv .venv
+source .venv/Scripts/activate
 ```
 
-#### En Linux / macOS / Git Bash:
+#### En Linux / macOS:
 ```
-python -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 ```
 
 ### 2. Instalar dependencias
